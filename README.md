@@ -123,10 +123,10 @@ R-MAVLink/
 │  magic   │  seq_id  │msg_type │ timestamp │ payload_len │ header_crc │
 │ 2 bytes  │ 2 bytes  │ 1 byte  │  2 bytes  │   1 byte    │  2 bytes   │
 ├──────────┴──────────┴─────────┴───────────┴─────────────┴────────────┤
-│                    MAVLink payload  (0 – 280 bytes)                   │
-├───────────────────────────────────────────────────────────────────────┤
-│                       frame_crc (2 bytes)                             │
-└───────────────────────────────────────────────────────────────────────┘
+│                    MAVLink payload  (0 – 280 bytes)                  │
+├──────────────────────────────────────────────────────────────────────┤
+│                       frame_crc (2 bytes)                            │
+└──────────────────────────────────────────────────────────────────────┘
 ```
 
 **Total overhead: +10 bytes per packet** (vs 0 for bare MAVLink).
@@ -220,9 +220,9 @@ PacketManager manager(&transport);
 - [x] Phase 3: Timeout retransmission
 - [x] Phase 4: Sliding window
 - [x] Phase 5: Stress testing framework
-- [ ] Phase 6: AES-256 payload encryption
-- [ ] Phase 7: Multi-node mesh (drone swarm)
-- [ ] Phase 8: Time synchronisation (for sensor fusion)
+- [x] Phase 6: AES-256 payload encryption
+- [x] Phase 7: Multi-node mesh (drone swarm)
+- [x] Phase 8: Time synchronisation (for sensor fusion)
 
 ---
 
